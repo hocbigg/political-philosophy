@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Political Philosophy</title>
+  <meta name="description" content="Path to a free self-taught education in Political Philosophy.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/political-philosophy/">
+  <meta property="og:title" content="Hocbigg - Political Philosophy">
+  <meta property="og:description" content="Path to a free self-taught education in Political Philosophy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/political-philosophy/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/political-philosophy/">Political Philosophy</a></li>
+      <li><a href="/political-philosophy/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/political-philosophy" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Political Philosophy</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Political Philosophy.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-08">2026-10-08</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Political philosophy is the systematic inquiry into how collective political life ought to be organized, governed, and justified. While empirical political science observes how institutions and voters actually behave, political philosophy addresses normative questions: What makes political power legitimate? Under what conditions, if any, do citizens have an obligation to obey the law? How should liberty and equality be balanced, and how should a society distribute its material resources? Studying this discipline provides the conceptual tools to evaluate political arguments and institutions critically rather than accepting inherited social arrangements at face value.</p>
+<p>This curriculum assumes no prior formal training in philosophy, political science, or legal theory. It is designed for independent, self-directed learners who want to build a rigorous foundation from scratch. All that is required is a willingness to read demanding philosophical texts closely and follow sustained analytical arguments.</p>
+<p>The curriculum covers only the essential historical and conceptual core that every student of political philosophy should understand before specializing. It focuses primarily on the core Western tradition from which contemporary normative debates evolved, tracing state legitimacy, social contract theory, utilitarianism, and distributive justice. It intentionally omits specialized subfields, such as epistemic democracy, global justice, or critical theory, which are best engaged after this foundational baseline is secure. Once you complete this core, you can explore specialized tracks in <a href="advanced_topics.html">Advanced Topics</a>.</p>
+<h3 id="how-to-navigate-the-sequence">How to Navigate the Sequence</h3>
+<p>Political philosophy is fundamentally a cumulative historical dialogue; successive thinkers formulate their theories in direct response to their predecessors. Because of this, you should study the five core subjects in linear order rather than jumping between them:</p>
+<ul>
+<li><strong>Introduction to Political Philosophy</strong> establishes the fundamental conceptual vocabulary—legitimacy, obligation, rights, and justice—and provides an overarching thematic roadmap.</li>
+<li><strong>Classical Political Thought</strong> introduces ancient Greek teleological ethics, regime classifications, and civic virtue through Plato and Aristotle.</li>
+<li><strong>Early Modern Political Thought</strong> documents the decisive break with classical thought, examining Machiavelli's realism and the development of the modern social contract by Hobbes, Locke, and Rousseau.</li>
+<li><strong>Nineteenth-Century Political Thought</strong> examines the ideological responses to industrial capitalism, pitting Mill's utilitarian defense of liberty against Marx's materialist critique of bourgeois rights.</li>
+<li><strong>Contemporary Theories of Justice</strong> brings these historical strands together in the post-1971 analytical debate initiated by John Rawls and his libertarian and egalitarian critics.</li>
+</ul>
+<p>Later frameworks are difficult to understand without their historical targets: Rousseau writes against Hobbes and Locke; Mill responds to earlier contractarians; and Rawls explicitly designs his theory of justice to overcome utilitarianism. Following the sequence preserves these essential intellectual links.</p>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="introduction-to-political-philosophy">Introduction to Political Philosophy</h3>
+<p>A foundational orientation exploring core normative questions of political obligation, state legitimacy, democratic authority, and the tension between individual liberty and social equality.</p>
+<p><a href="https://oyc.yale.edu/political-science/plsc-114" target="_blank" rel="noopener noreferrer">Introduction to Political Philosophy, PLSC 114 (Yale Open Courses / Steven B. Smith)</a> - Serves as the primary lecture foundation for the curriculum, providing a complete twenty-four-lecture survey of major political thinkers from ancient Greece through the early nineteenth century.</p>
+<p><a href="https://books.google.com/books?isbn=9780199658015" target="_blank" rel="noopener noreferrer">An Introduction to Political Philosophy (Jonathan Wolff / Oxford University Press)</a> - A structured, thematic textbook that complements Smith's historical lectures by systematically examining conceptual problems such as the justified state, democratic distribution, and individual rights.</p>
+<p><a href="https://books.google.com/books?isbn=9780192803955" target="_blank" rel="noopener noreferrer">Political Philosophy: A Very Short Introduction (David Miller / Oxford University Press)</a> - An accessible, compact alternative to Wolff's textbook for learners seeking a concise, high-level primer before tackling more extensive readings.</p>
+<h3 id="classical-political-thought">Classical Political Thought</h3>
+<p>The ancient Greek examination of the polis, regime typologies, civic virtue, and the fundamental relationship between justice, ethics, and political life.</p>
+<p><a href="https://classics.mit.edu/Plato/republic.html" target="_blank" rel="noopener noreferrer">The Republic (Plato / Internet Classics Archive, Benjamin Jowett translation)</a> - A complete free translation of the foundational dialogue exploring justice, the ideal city-state, and philosopher-rulers, forming a complementary pair with Aristotle's empirical work.</p>
+<p><a href="https://classics.mit.edu/Aristotle/politics.html" target="_blank" rel="noopener noreferrer">Politics (Aristotle / Internet Classics Archive, Benjamin Jowett translation)</a> - Complements Plato's Republic by approaching political philosophy through comparative regime analysis, citizenship, constitutional balance, and the teleology of the political animal.</p>
+<p><a href="https://oyc.yale.edu/political-science/plsc-114" target="_blank" rel="noopener noreferrer">Introduction to Political Philosophy, PLSC 114, Lectures 1–9 (Yale Open Courses / Steven B. Smith)</a> - The guided lecture companion meant to be viewed alongside Plato and Aristotle to help beginners navigate ancient Greek terminology, historical context, and difficult arguments.</p>
+<h3 id="early-modern-political-thought">Early Modern Political Thought</h3>
+<p>The development of modern political theory through the emergence of political realism, the secular state, and the social contract tradition.</p>
+<p><a href="https://www.gutenberg.org/ebooks/1232" target="_blank" rel="noopener noreferrer">The Prince (Niccolò Machiavelli / Project Gutenberg, W. K. Marriott translation)</a> - A free full-text edition of the foundational text of modern political realism; read first as the historical break from classical virtue politics before studying the contractarians.</p>
+<p><a href="https://www.gutenberg.org/ebooks/3207" target="_blank" rel="noopener noreferrer">Leviathan (Thomas Hobbes / Project Gutenberg)</a> - Follows Machiavelli's realism to establish the first modern social contract theory, deriving absolute sovereign power from the natural state of war.</p>
+<p><a href="https://www.gutenberg.org/ebooks/7370" target="_blank" rel="noopener noreferrer">Second Treatise of Government (John Locke / Project Gutenberg)</a> - Directly answers Hobbes by presenting a liberal constitutional contractarian model grounded in natural rights, private property, limited government, and the right of revolution.</p>
+<p><a href="https://www.gutenberg.org/ebooks/46333" target="_blank" rel="noopener noreferrer">The Social Contract and Discourses (Jean-Jacques Rousseau / Project Gutenberg, G. D. H. Cole translation)</a> - Expands and challenges Lockean liberalism by arguing for popular sovereignty, the general will, and an egalitarian critique of social inequality.</p>
+<p><a href="https://oyc.yale.edu/political-science/plsc-114" target="_blank" rel="noopener noreferrer">Introduction to Political Philosophy, PLSC 114, Lectures 10–20 (Yale Open Courses / Steven B. Smith)</a> - The structured lecture companion designed to accompany the four primary texts above, walking learners through Machiavelli's statecraft, Hobbes's absolutism, Locke's rights theory, and Rousseau's civic compact.</p>
+<h3 id="nineteenth-century-political-thought">Nineteenth-Century Political Thought</h3>
+<p>The ideological confrontation between utilitarian liberalism, rights theory, and the socialist critique of industrial capitalism.</p>
+<p><a href="https://www.gutenberg.org/ebooks/34901" target="_blank" rel="noopener noreferrer">On Liberty (John Stuart Mill / Project Gutenberg)</a> - A seminal primary text defining the liberal harm principle and defending individual freedom of thought and action against majoritarian coercion.</p>
+<p><a href="https://www.gutenberg.org/ebooks/11224" target="_blank" rel="noopener noreferrer">Utilitarianism (John Stuart Mill / Project Gutenberg)</a> - A complementary work to On Liberty that articulates Mill's qualitative utilitarianism, providing the consequentialist moral framework underpinning his political proposals.</p>
+<p><a href="https://www.gutenberg.org/ebooks/61" target="_blank" rel="noopener noreferrer">The Communist Manifesto (Karl Marx and Friedrich Engels / Project Gutenberg)</a> - The essential primary text offering the materialist critique of bourgeois capitalism, class exploitation, and liberal rights theory.</p>
+<p><a href="https://oyc.yale.edu/political-science/plsc-118" target="_blank" rel="noopener noreferrer">The Moral Foundations of Politics, PLSC 118, Lectures 2–11 (Open Yale Courses / Ian Shapiro)</a> - The structured lecture guide for this subject, systematically explaining classical utilitarianism (Bentham, Mill) and Marxist political economy; this course can also be audited for free on Coursera.</p>
+<h3 id="contemporary-theories-of-justice">Contemporary Theories of Justice</h3>
+<p>The post-Rawlsian philosophical landscape focused on distributive justice, liberal egalitarianism, libertarian property rights, and communitarian critiques.</p>
+<p><a href="https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6" target="_blank" rel="noopener noreferrer">Justice with Michael Sandel (Harvard University / YouTube)</a> - The primary video lecture series for this subject, using accessible moral dilemmas and Socratic dialogue to introduce utilitarianism, libertarianism, and liberal egalitarianism.</p>
+<p><a href="https://books.google.com/books?isbn=9780374532505" target="_blank" rel="noopener noreferrer">Justice: What's the Right Thing to Do? (Michael Sandel / Farrar, Straus and Giroux)</a> - An interchangeable book companion to Sandel's Harvard video series, covering identical conceptual debates for learners who prefer structured reading to video lectures.</p>
+<p><a href="https://books.google.com/books?isbn=9780674000773" target="_blank" rel="noopener noreferrer">A Theory of Justice (John Rawls / Harvard University Press)</a> - The defining primary text of contemporary political philosophy, introducing the original position, the veil of ignorance, and the difference principle.</p>
+<p><a href="https://books.google.com/books?isbn=9780465051007" target="_blank" rel="noopener noreferrer">Anarchy, State, and Utopia (Robert Nozick / Basic Books)</a> - The essential libertarian counter-text to Rawls, arguing for the minimal state and an historical entitlement theory of justice based on self-ownership.</p>
+<p><a href="https://books.google.com/books?isbn=9780198782742" target="_blank" rel="noopener noreferrer">Contemporary Political Philosophy: An Introduction (Will Kymlicka / Oxford University Press)</a> - An advanced survey textbook that builds on Rawls and Nozick, mapping the subsequent theoretical developments in communitarianism, egalitarianism, and feminist political theory.</p>
+<p><a href="https://ocw.mit.edu/courses/24-04j-justice-spring-2012/" target="_blank" rel="noopener noreferrer">Justice, MIT 24.04J (MIT OpenCourseWare / Spring 2012)</a> - A complementary university-level study package providing lecture notes, recitation handouts, and study questions to structure an independent reading of Rawls and Nozick.</p>
+    </article>
+  </main>
+
+</body>
+</html>

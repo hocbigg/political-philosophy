@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Political Philosophy: Advanced Topics</title>
+  <meta name="description" content="Political Philosophy: Advanced Topics curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/political-philosophy/advanced_topics.html">
+  <meta property="og:title" content="Political Philosophy: Advanced Topics">
+  <meta property="og:description" content="Political Philosophy: Advanced Topics curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/political-philosophy/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/political-philosophy/">Political Philosophy</a></li>
+      <li><a href="/political-philosophy/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/political-philosophy" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="political-philosophy-advanced-topics">Political Philosophy: Advanced Topics</h1>
+<h2 id="track-index">Track Index</h2>
+<p>Learners are encouraged to select one or two tracks aligned with their specific normative, institutional, or regional interests rather than attempting to study all five tracks sequentially.</p>
+<ul>
+<li><strong>Democratic Theory</strong> - Advanced study of democratic legitimacy, deliberative decision-making, epistemic proceduralism, and institutional innovations such as citizen assemblies and sortition.</li>
+<li><strong>Global Justice and Human Rights</strong> - Normative inquiries into transnational redistribution, territorial rights, the philosophical foundations of human rights, and global climate obligations.</li>
+<li><strong>Identity, Multiculturalism, and Feminist Political Philosophy</strong> - Critical investigations into group-differentiated citizenship, structural oppression, epistemic injustice, and feminist re-evaluations of the state and the family.</li>
+<li><strong>Advanced Distributive Justice and Egalitarianism</strong> - Post-Rawlsian debates regarding the proper metric of equality, comparing luck egalitarianism, relational equality, the capabilities approach, and the moral limits of markets.</li>
+<li><strong>Comparative and Non-Western Political Philosophy</strong> - Systematic explorations of political authority, popular sovereignty, and civic order within modern Islamic, Confucian, and African traditions.</li>
+</ul>
+<h2 id="democratic-theory">Democratic Theory</h2>
+<p>Advanced examination of democratic legitimacy, evaluating deliberative decision-making, collective intelligence, and participatory institutional design beyond conventional majoritarian voting.</p>
+<p>Deliberative Democracy: <a href="https://books.google.com/books?isbn=9780262522343" target="_blank" rel="noopener noreferrer">Deliberative Democracy: Essays on Reason and Politics (James Bohman &amp; William Rehg, eds. / MIT Press)</a> - The canonical anthology compiling foundational papers by Jürgen Habermas, Joshua Cohen, John Rawls, and David Estlund that establish the deliberative model of collective decision-making.</p>
+<p>Epistemic Democracy: <a href="https://books.google.com/books?isbn=9780691143248" target="_blank" rel="noopener noreferrer">Democratic Authority: A Philosophical Framework (David M. Estlund / Princeton University Press)</a> - A rigorous defense of epistemic proceduralism, arguing that democracy derives legitimacy in part from its ability to track correct outcomes without collapsing into authoritarian rule by experts.</p>
+<p>Democratic Innovations and Mini-Publics: <a href="https://deliberation.stanford.edu/videos-podcast" target="_blank" rel="noopener noreferrer">Videos and Podcast (Stanford Deliberative Democracy Lab)</a> - A free media series featuring James Fishkin and collaborators that bridges normative theory and institutional design through deliberative polling, sortition, and practical citizen assemblies.</p>
+<p>Institutional Innovation Design: <a href="https://books.google.com/books?isbn=9780521514774" target="_blank" rel="noopener noreferrer">Democratic Innovations: Designing Institutions for Citizen Participation (Graham Smith / Cambridge University Press)</a> - An authoritative comparative analysis assessing how real-world institutional mechanisms, such as participatory budgeting and citizens' assemblies, realize core democratic goods.</p>
+<h2 id="global-justice-and-human-rights">Global Justice and Human Rights</h2>
+<p>The extension of normative political philosophy beyond domestic borders, investigating international redistribution, territorial rights, the foundation of human rights, and global climate duties.</p>
+<p>Foundations of Global Justice: <a href="https://ocw.mit.edu/courses/17-000j-political-philosophy-global-justice-spring-2003/" target="_blank" rel="noopener noreferrer">Political Philosophy: Global Justice, 17.000J / 24.611J (MIT OpenCourseWare / Joshua Cohen, Thomas Scanlon, Amartya Sen)</a> - A comprehensive graduate-level seminar examining cosmopolitanism, state sovereignty, international distributive justice, and border control.</p>
+<p>Global Poverty and Institutional Harms: <a href="https://books.google.com/books?isbn=9780745641468" target="_blank" rel="noopener noreferrer">World Poverty and Human Rights (Thomas Pogge / Polity Press)</a> - The defining cosmopolitan treatise arguing that affluent countries violate negative duties of justice by upholding an international institutional order that foreseeably produces severe deprivation.</p>
+<p>The Philosophy of Human Rights: <a href="https://books.google.com/books?isbn=9780199572458" target="_blank" rel="noopener noreferrer">The Idea of Human Rights (Charles R. Beitz / Oxford University Press)</a> - A leading formulation of the political conception of human rights, treating them as international discursive standards that limit domestic sovereignty and justify external interference.</p>
+<p>Environmental and Climate Justice: <a href="https://www.coursera.org/learn/environmental-justice" target="_blank" rel="noopener noreferrer">Environmental Justice (University of Michigan / Coursera)</a> - A free-to-audit course exploring procedural, distributive, and restorative justice across global environmental crises, indigenous land claims, and climate inequities.</p>
+<p>Environmental and Climate Justice: <a href="https://books.google.com/books?isbn=9780199985142" target="_blank" rel="noopener noreferrer">A Perfect Moral Storm: The Ethical Tragedy of Climate Change (Stephen M. Gardiner / Oxford University Press)</a> - The seminal philosophical monograph detailing how the convergence of spatial dispersion, intergenerational fragmentation, and institutional inadequacy obstructs climate justice.</p>
+<h2 id="identity-multiculturalism-and-feminist-political-philosophy">Identity, Multiculturalism, and Feminist Political Philosophy</h2>
+<p>Critical examination of group-differentiated citizenship, structural oppression, epistemic marginalization, and feminist re-evaluations of the public-private divide.</p>
+<p>Multiculturalism and Minority Rights: <a href="https://books.google.com/books?isbn=9780198290919" target="_blank" rel="noopener noreferrer">Multicultural Citizenship: A Liberal Theory of Minority Rights (Will Kymlicka / Oxford University Press)</a> - The seminal work demonstrating that group-differentiated rights for national minorities and polyethnic groups can be defended within a liberal framework of individual autonomy.</p>
+<p>Feminist Political Theory: <a href="https://ocw.mit.edu/courses/wgs-301j-feminist-thought-fall-2014/" target="_blank" rel="noopener noreferrer">Feminist Thought, WGS.301J (MIT OpenCourseWare / Sally Haslanger)</a> - A structured OpenCourseWare seminar examining ideological constructions of gender, the public-private divide, the gendered division of labor, and the political dimensions of social power.</p>
+<p>Structural Injustice and Oppression: <a href="https://books.google.com/books?isbn=9780691235165" target="_blank" rel="noopener noreferrer">Justice and the Politics of Difference (Iris Marion Young / Princeton University Press)</a> - A foundational critique of the distributive paradigm of justice, arguing that political philosophy must focus on structural oppression, domination, and institutional decision-making structures.</p>
+<p>Epistemic Injustice: <a href="https://books.google.com/books?isbn=9780199570522" target="_blank" rel="noopener noreferrer">Epistemic Injustice: Power and the Ethics of Knowing (Miranda Fricker / Oxford University Press)</a> - The definitive monograph establishing the concepts of testimonial and hermeneutical injustice, illustrating how social prejudices undermine marginalized persons in their capacities as knowers.</p>
+<h2 id="advanced-distributive-justice-and-egalitarianism">Advanced Distributive Justice and Egalitarianism</h2>
+<p>Post-Rawlsian inquiries into the proper metric of egalitarian concern, comparing luck egalitarianism, relational and democratic equality, capabilities, and the commodification of civic goods.</p>
+<p>Luck Egalitarianism: <a href="https://books.google.com/books?isbn=9780674030759" target="_blank" rel="noopener noreferrer">Rescuing Justice and Equality (G. A. Cohen / Harvard University Press)</a> - A demanding analytical critique of Rawls's difference principle, presenting an influential case that justice requires eliminating unchosen disadvantages and applying an egalitarian ethos to personal choice.</p>
+<p>Relational Equality: <a href="https://www.philosophy.rutgers.edu/joomlatools-files/docman-files/4ElizabethAnderson.pdf" target="_blank" rel="noopener noreferrer">What Is the Point of Equality? (Elizabeth S. Anderson / Ethics)</a> - A freely accessible, landmark paper that critiques luck egalitarian preoccupation with cosmic bad luck, arguing instead that egalitarianism's true aim is eliminating social hierarchy and oppression.</p>
+<p>The Capabilities Approach: <a href="https://books.google.com/books?isbn=9780674072350" target="_blank" rel="noopener noreferrer">Creating Capabilities: The Human Development Approach (Martha C. Nussbaum / Harvard University Press)</a> - A concise philosophical presentation of the capabilities framework, articulating the central constitutional entitlements required for a life worthy of human dignity.</p>
+<p>The Moral Limits of Markets: <a href="https://books.google.com/books?isbn=9780195311594" target="_blank" rel="noopener noreferrer">Why Some Things Should Not Be for Sale: The Moral Limits of Markets (Debra Satz / Oxford University Press)</a> - A systematic philosophical inquiry into "noxious markets," analyzing how commodifying certain goods undermines agency, exploits asymmetric vulnerability, and erodes the conditions for democratic citizenship.</p>
+<h2 id="comparative-and-non-western-political-philosophy">Comparative and Non-Western Political Philosophy</h2>
+<p>Systematic inquiry into political authority, legitimacy, and collective flourishing across Islamic, Confucian, and African philosophical traditions.</p>
+<p>Modern Islamic Political Thought: <a href="https://books.google.com/books?isbn=9780674987838" target="_blank" rel="noopener noreferrer">The Caliphate of Man: Popular Sovereignty in Modern Islamic Thought (Andrew F. March / Harvard University Press)</a> - A comprehensive philosophical analysis of how twentieth-century Islamic theorists reconciled divine sovereignty with democratic self-governance through the doctrine of universal human vicegerency.</p>
+<p>Confucian Political Meritocracy: <a href="https://books.google.com/books?isbn=9780691166452" target="_blank" rel="noopener noreferrer">The China Model: Political Meritocracy and the Limits of Democracy (Daniel A. Bell / Princeton University Press)</a> - A comparative treatise evaluating the historical and contemporary viability of political meritocracy, civil service examinations, and multi-tier governance as alternatives to Western electoral democracy.</p>
+<p>African Communitarianism and Legitimacy: <a href="https://books.google.com/books?isbn=9780195112269" target="_blank" rel="noopener noreferrer">Tradition and Modernity: Philosophical Reflections on the African Experience (Kwame Gyekye / Oxford University Press)</a> - A foundational monograph on African political philosophy exploring moderate communitarianism, democratic legitimacy, and the philosophical reconciliation of indigenous political values with the modern postcolonial state.</p>
+<p>African Political Thought and Anticolonial Liberation: African Political Thought (Stephen Chan / SOAS University of London) - A ten-lecture university video series surveying anticolonial liberation, Negritude, African socialism, and the intellectual history of modern African governance; search "African Political Thought Stephen Chan SOAS" on YouTube.</p>
+    </article>
+  </main>
+
+</body>
+</html>
